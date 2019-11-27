@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home.apps.HomeConfig',
+    'hostel.apps.HostelConfig',
+    'student.apps.StudentConfig',
+    'teacher.apps.TeacherConfig',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +89,12 @@ DATABASES = {
     }
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -123,3 +133,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
