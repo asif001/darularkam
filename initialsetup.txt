@@ -1,0 +1,4 @@
+1.database-mysql
+2.platform-web
+3.framework-django
+4.change my.ini file in server - follow https://mathiasbynens.be/notes/mysql-utf8mb4

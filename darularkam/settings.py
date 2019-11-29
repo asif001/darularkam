@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'darularkam.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'darulakram',
         'USER': 'asif',
         'PASSWORD': '4532',
@@ -116,6 +116,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+DEFAULT_CHARSET = 'utf-8'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
