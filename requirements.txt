@@ -1,5 +1,6 @@
 certifi==2019.9.11
 Django==2.2.7
+mysqlclient==1.4.6
 psycopg2==2.8.4
 python-memcached==1.59
 pytz==2019.3
