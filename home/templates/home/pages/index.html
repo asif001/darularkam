@@ -1,10 +1,862 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    {% load static %}
+
+  <title>DARUL ARKAM SCHOOL & MADRASAH</title>
+  <link rel="icon" href="{% static 'home/images/icon.png' %}" type="image/png" sizes="16x16">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="{% static 'home/css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'home/fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'home/fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap-datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
 </head>
-<body>
-    In home html
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header id="header" class="site-navbar js-sticky-header site-navbar-target" role="banner">
+      <div class="">
+        <div class="d-flex align-items-center">
+          <div class="site-logo">
+            <a href="index.html" class="d-block">
+              <img id="logo" src="{% static 'home/images/logo1.png' %}" alt="Image" class="img-fluid ml-2" style="max-height: 40px;">
+              <!-- <span style="float: none;">দারুল আরকাম স্কুল এন্ড মাদ্রাসা</span> -->
+              <!-- <h6>asas</h6> -->
+            </a>
+          </div>
+          <div class="ml-auto">
+            <nav class="site-navigation position-relative text-right ex1" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active">
+                  <a href="index.html" class="nav-link text-left">হোম</a>
+                </li>
+                <li class="has-children">
+                  <a href="#" class="nav-link text-left">একাডেমিক তথ্য</a>
+                  <ul class="dropdown">
+                    <li><a href="{% url 'school:home' %}">স্কুল বিভাগ</a></li>
+                    <li><a href="{% url 'hifz:home' %}">হিফ্জ বিভাগ</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="{% url 'hostel:home' %}" class="nav-link text-left">হোস্টেল</a>
+                </li>
+                <li>
+                  <a href="{% url 'home:about' %}" class="nav-link text-left">আমাদের সম্পর্কে</a>
+                </li>
+                <li>
+                    <a href="{% url 'home:contact' %}" class="nav-link text-left">যোগাযোগ</a>
+                </li>
+                <li>
+                    <a href="{% url 'administrator:login' %}" class="nav-link text-left">লগইন</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="">
+            <div class="social-wrap container vertical-center">
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<div style="height: 70px;"></div>
+<script>
+document.getElementById("header").style.padding = "30px 10px";
+var hl = document.getElementById('logo').offsetHeight;
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("header").style.padding = "10px 10px";
+    document.getElementById("logo").style.height = hl-hl*.1+"px";
+    document.getElementById("logo").style.transition = ".35s ease-in-out";
+  } else {
+    document.getElementById("header").style.padding = "30px 10px";
+    document.getElementById("logo").style.height = hl+"px";
+    document.getElementById("logo").style.transition = ".35s ease-in-out";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<!--     <div class="py-2 bg-light">
+      <div class="container">
+          <div class="col-lg-9 d-none d-lg-block">
+            <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> Have a questions?</a>
+            <a href="#" class="small mr-3"><span class="icon-phone2 mr-2"></span> 10 20 123 456</a>
+            <a href="#" class="small mr-3"><span class="icon-envelope-o mr-2"></span> info@mydomain.com</a>
+          </div>
+          <div class="col-lg-12 text-center">
+            <a href="login.html" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
+            <a href="register.html" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+          </div>
+          <div class="col-lg-12 text-center">
+            <h2 class="text-black">DARUL ARKAM SCHOOL & MADRASAH</h2>
+            <h2 class="text-black">দারুল আরকাম স্কুল এন্ড মাদ্রাসা</h2>
+          </div>
+      </div>
+    </div> -->
+
+
+
+ <!--    Sadar Hospital Road, opposite the South Gate of Government Women's College, adjacent to the Old Driver Association, South Fourth, Comilla.  Phone: 081 - 74215 Mobile 01816859142, 01781 - 966030.
+সদর হাসপাতাল রোড , সরকারি মহিলা কলেজের দক্ষিণ গেইটের বিপরীতে , পুরাতন ড্রাইভার সমিতি সংলগ্ন , দক্ষিণ চর্থা , কুমিল্লা । ফোনঃ 081 - 74215 মোবাইল 01816859142 , 01781 - 966030 ।
+
+طريق مستشفى الصدر ، مقابل البوابة الجنوبية للكلية الحكومية للبنات ، بجوار جمعية السائقين القديمة ، الجنوب الرابع ، كوميلا.
+
+
+
+হোম
+আমাদের সম্পর্কে
+একাডেমিক বিভাগ
+কার্যক্রম
+ইভেন্ট
+নোটিশ
+যোগাযোগ
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide mh" data-ride="carousel">
+  	  <ol class="carousel-indicators">
+  	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  	  </ol>
+  	  <div class="carousel-inner mh">
+  	    <div class="carousel-item active mh">
+  	      <img class="d-block w-100" src="{% static 'home/images/4.jpg' %}" alt="First slide">
+          <div class="contentss">
+            <h4 class="text-responsive">DARUL ARKAM SCHOOL & MADRASAH</h4>
+            <h6 class="text-responsive">Sadar Hospital Road, opposite the South Gate of Government Women's College, adjacent to the Old Driver Association, South Fourth, Comilla.</h6>
+          </div>
+  	    </div>
+  	    <div class="carousel-item mh">
+  	      <img class="d-block w-100" src="{% static 'home/images/5.jpg' %}" alt="Second slide">
+          <div class="contentss">
+            <h4 class="text-responsive">দারুল আরকাম স্কুল এন্ড মাদ্রাসা</h4>
+            <h6 class="text-responsive">সদর হাসপাতাল রোড , সরকারি মহিলা কলেজের দক্ষিণ গেইটের বিপরীতে , পুরাতন ড্রাইভার সমিতি সংলগ্ন , দক্ষিণ চর্থা , কুমিল্লা</h6>
+          </div>
+  	    </div>
+  	    <div class="carousel-item mh">
+  	      <img class="d-block w-100" src="{% static 'home/images/6.jpg' %}" alt="Third slide">
+          <div class="contentss">
+            <h4 class="text-responsive">ارول أركام للمدرسة والمدرسة</h4>
+            <h6 class="text-responsive">طريق مستشفى الصدر ، مقابل البوابة الجنوبية للكلية الحكومية للبنات ، بجوار جمعية السائقين القديمة ، الجنوب الرابع ، كوميلا.</h6>
+          </div>
+  	    </div>
+  	  </div>
+  	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  	    <span class="sr-only">Previous</span>
+  	  </a>
+  	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  	    <span class="sr-only">Next</span>
+  	  </a>
+    </div>
+
+<!--     <div class="hero-slide owl-carousel site-blocks-cover">
+      <div class="intro-section" style="background-image: url('images/1.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+              <h1>Academics University</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-section" style="background-image: url('images/2.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+              <h1>You Can Learn Anything</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+<section id="about-part" class="pt-65">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-title-underline mt-5 " >
+                        <!-- <h5>About us</h5> -->
+                        <span><h2>আমাদের পথচলা</h2></span>
+                    </div> <!-- section title -->
+                    <div class="about-cont">
+                        <p>মহান আল্লাহ ও তাঁর রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সন্তুষ্টি অর্জনের লক্ষ্যে আহলে সুন্নাত ওয়াল জামাতের আকিদা অনুসারে আমলে-আখলাকে, লেবাসে-পোশাকে একদল আদর্শ ও দেশপ্রেমিক' আলেমেদ্বীন তৈরি করা। আলেমগণ নবীদের উত্তরসূরী। হাক্কানী রাব্বানী আলেমে দীনের মাধ্যমেই আল্লাহ পাক ইলমকে  জগতে টিকিয়ে রাখবেন। রাসূল সাঃ বলছেন 'ইলম বা জ্ঞান একমাত্র ছাত্র-শিক্ষকের মধ্যে পরস্পর শিক্ষা গ্রহণ ও দানের মাধ্যমে অর্জিত হবে।'<br> <br> দীনী ইলমের এ সংকট সন্ধিক্ষণে সত্যিকার দীনী শিক্ষার পাশাপাশি আধুনিক শিক্ষার সমন্বয় সাধনই দারুল আরকাম স্কুল এন্ড  মাদরাসার প্রতিষ্ঠা ও পথচলা। </p>
+                        <!-- <a href="#" class="main-btn mt-55">Read More</a> -->
+                    </div>
+                </div> <!-- about cont -->
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="about-event mt-50">
+                        <div class="event-title section-title-underline">
+                            <span><h3>নোটিশ</h3></span>
+                        </div> <!-- event title -->
+                        <ul>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ৯ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>ক্যাম্পাস পরিচ্ছন্ন কর্মশালার</h4></a>
+                                    <!-- <span><i class="fa fa-map-marker"></i> Rc Auditorim</span> -->
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ২ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>ভর্তি পরীক্ষার সময়সূচি</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ২ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>পুরস্কার বিতরণী অনুষ্ঠান</h4></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <p><a href="{% url 'notice:home' %}" class="btn btn-primary px-4 rounded-0">আরো দেখুন</a></p>
+                    </div> <!-- about event -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="about-bg">
+            <img src="{% static 'home/images/8.png' %}" alt="About">
+        </div>
+    </section>
+
+
+<!-- <div class="news-updates">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+             <div class="section-heading">
+              <h2 class="text-black">News &amp; Updates</h2>
+              <a href="#">Read All News</a>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="post-entry-big">
+                  <a href="news-single.html" class="img-link"><img src="images/blog_large_1.jpg" alt="Image" class="img-fluid"></a>
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <a href="#">June 6, 2019</a>
+                      <span class="mx-1">/</span>
+                      <a href="#">Admission</a>, <a href="#">Updates</a>
+                    </div>
+                    <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="post-entry-big horizontal d-flex mb-4">
+                  <a href="news-single.html" class="img-link mr-4"><img src="images/blog_1.jpg" alt="Image" class="img-fluid"></a>
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <a href="#">June 6, 2019</a>
+                      <span class="mx-1">/</span>
+                      <a href="#">Admission</a>, <a href="#">Updates</a>
+                    </div>
+                    <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
+                  </div>
+                </div>
+
+                <div class="post-entry-big horizontal d-flex mb-4">
+                  <a href="news-single.html" class="img-link mr-4"><img src="images/blog_2.jpg" alt="Image" class="img-fluid"></a>
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <a href="#">June 6, 2019</a>
+                      <span class="mx-1">/</span>
+                      <a href="#">Admission</a>, <a href="#">Updates</a>
+                    </div>
+                    <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
+                  </div>
+                </div>
+
+                <div class="post-entry-big horizontal d-flex mb-4">
+                  <a href="news-single.html" class="img-link mr-4"><img src="images/blog_1.jpg" alt="Image" class="img-fluid"></a>
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <a href="#">June 6, 2019</a>
+                      <span class="mx-1">/</span>
+                      <a href="#">Admission</a>, <a href="#">Updates</a>
+                    </div>
+                    <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-4 mb-5">
+            <h2 class="section-title-underline mb-5">
+              <span>মাদরাসার বৈশিষ্ট্য</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border mih260">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-library text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>আবাসিক</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <!-- <p><a href="#" class="btn btn-primary px-4 rounded-0">আরও পড়ুন</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border mih260">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-mortarboard text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>অনাবাসিক</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <!-- <p><a href="#" class="btn btn-primary px-4 rounded-0">আরও পড়ুন</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border mih260">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-school-material text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>ডে-কেয়ার</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <!-- <p><a href="#" class="btn btn-primary px-4 rounded-0">আরও পড়ুন</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border mih260">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-school-material text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>ক্যামেরা নিয়ন্ত্রিত</h2>
+                <!-- <p>ক্লোজসার্কিট ক্যামেরা দ্বারা নিয়ন্ত্রিত</p> -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <!-- <p><a href="#" class="btn btn-primary px-4 rounded-0">আরও পড়ুন</a></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section mt-4">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-6 mb-5">
+            <h2 class="section-title-underline">
+              <span>শিক্ষাস্তর ও সিলেবাস</span>
+            </h2>
+            <p class="mb-4">অত্র প্রতিষ্ঠানের শিক্ষাকার্যক্রম পর্যায় ক্রমে দুইটি স্তরে বিভক্ত</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 mb-lg-0 mb4">
+            <div class="feature-1 border mih260">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-library text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>স্কুল বিভাগ</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <p><a href="{% url 'school:home' %}" class="btn btn-primary px-4 rounded-0">আরও পড়ুন</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 mb-lg-0 mb4">
+            <div class="feature-1 border mih260">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-mortarboard text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>হিফ্জ বিভাগ</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                <p><a href="{% url 'hifz:home' %}" class="btn btn-primary px-4 rounded-0">আরও পড়ুন</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+<!--     <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-mortarboard"></span>
+            <h3>Our Philosphy</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea? Dolore, amet reprehenderit.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-school-material"></span>
+            <h3>Academics Principle</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+              Dolore, amet reprehenderit.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-library"></span>
+            <h3>Key of Success</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+              Dolore, amet reprehenderit.</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+
+<!-- News and Activity -->
+
+<!--     <div class="site-section">
+      <div class="container">
+
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h2 class="section-title-underline mb-3">
+              <span>Popular Courses</span>
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, id?</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+              <div class="owl-slide-3 owl-carousel">
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <div class=" mh200"><img src="images/1.jpg" alt="Image" class="img-fluid"></div>
+                      <div class="price">$99.00</div>
+                      <div class="category"><h3>Mobile Application</h3></div>
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>How To Create Mobile Apps Using Ionic</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p>
+                      <p><a href="course-single.html" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                    </div>
+                  </div>
+
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <div class=" mh200"><img src="images/2.jpg" alt="Image" class="img-fluid"></div>
+                      <div class="price">$99.00</div>
+                      <div class="category"><h3>Web Design</h3></div>
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>How To Create Mobile Apps Using Ionic</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p>
+                      <p><a href="course-single.html" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                    </div>
+                  </div>
+
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <div class=" mh200"><img src="images/4.jpg" alt="Image" class="img-fluid"></div>
+                      <div class="price">$99.00</div>
+                      <div class="category"><h3>Arithmetic</h3></div>
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>How To Create Mobile Apps Using Ionic</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p>
+                      <p><a href="courses-single.html" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                    </div>
+                  </div>
+
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <div class=" mh200"><img src="images/5.jpg" alt="Image" class="img-fluid"></div>
+                      <div class="price">$99.00</div>
+                      <div class="category"><h3>Mobile Application</h3></div>
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>How To Create Mobile Apps Using Ionic</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p>
+                      <p><a href="course-single.html" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                    </div>
+                  </div>
+
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <div class=" mh200"><img src="images/6.jpg" alt="Image" class="img-fluid"></div>
+                      <div class="price">$99.00</div>
+                      <div class="category"><h3>Web Design</h3></div>
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>How To Create Mobile Apps Using Ionic</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p>
+                      <p><a href="course-single.html" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                    </div>
+                  </div>
+
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <div class=" mh200"><img src="images/7.jpg" alt="Image" class="img-fluid"></div>
+                      <div class="price">$99.00</div>
+                      <div class="category"><h3>Mobile Application</h3></div>
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>How To Create Mobile Apps Using Ionic</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusantium ipsam.</p>
+                      <p><a href="course-single.html" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                    </div>
+                  </div>
+
+              </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div> -->
+
+
+
+
+<!--     <div class="section-bg style-1" style="background-image: url('images/about_1.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 class="section-title-underline style-2">
+              <span>About Our University</span>
+            </h2>
+          </div>
+          <div class="col-lg-8">
+            <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem nesciunt quaerat ad reiciendis perferendis voluptate fugiat sunt fuga error totam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus assumenda omnis tempora ullam alias amet eveniet voluptas, incidunt quasi aut officiis porro ad, expedita saepe necessitatibus rem debitis architecto dolore? Nam omnis sapiente placeat blanditiis voluptas dignissimos, itaque fugit a laudantium adipisci dolorem enim ipsum cum molestias? Quod quae molestias modi fugiat quisquam. Eligendi recusandae officiis debitis quas beatae aliquam?</p>
+            <p><a href="#">Read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- // 05 - Block -->
+  <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-4">
+            <h2 class="section-title-underline">
+              <span>তাদের কিছু কথা</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="owl-slide owl-carousel">
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'home/images/p1.jpg' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>মুফতী কেফায়াতুল্লাহ</h3>
+                <span>হাটহাজারী মাদ্রাসা</span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;মহান আল্লাহ ও তাঁর রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সন্তুষ্টি অর্জনের লক্ষ্যে আহলে সুন্নাত ওয়াল জামাতের আকিদা অনুসারে আমলে-আখলাকে, লেবাসে-পোশাকে একদল আদর্শ ও দেশপ্রেমিক' আলেমেদ্বীন তৈরি করা।&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'home/images/p2.jpg' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>মুফতী রফিউদ্দিন আহমাদ</h3>
+                <span>ঢালকানগর মাদ্রাসা</span>
+              </div>
+            </div>
+            <div>
+              <p>শিশু শ্রেণী থেকে সালিছ (তৃতীয়) শ্রেণি মাদ্রাসার নিজস্ব সিলেবাসের আলোকে পরিচালিত। শিক্ষার্থীদের সহি শুদ্ধ করে পূর্ণ কোরআন তেলাওয়াত শিক্ষাদানের পাশাপাশি বাংলা ইংরেজি গণিত বিষয়ে পাঠদান</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'home/images/p1.jpg' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>শায়খুল হাদিস মুফতি শফিকুর রহমান</h3>
+                <span>প্রধান মুফতি জামেয়া মাদানিয়া কাজির বাজার সিলেট </span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;শিশু শ্রেণী থেকে সালিছ (তৃতীয়) শ্রেণি মাদ্রাসার নিজস্ব সিলেবাসের আলোকে পরিচালিত। শিক্ষার্থীদের সহি শুদ্ধ করে পূর্ণ কোরআন তেলাওয়াত শিক্ষাদানের পাশাপাশি বাংলা ইংরেজি গণিত বিষয়ে পাঠদান&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'home/images/p3.jpg' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>মুফতি আবুল হাসান মুহাম্মাদ আব্দুল্লাহ</h3>
+                <span>হাটহাজারী মাদ্রাসা</span>
+              </div>
+            </div>
+            <div>
+              <p>মহান আল্লাহ ও তাঁর রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সন্তুষ্টি অর্জনের লক্ষ্যে আহলে সুন্নাত ওয়াল জামাতের আকিদা অনুসারে আমলে-আখলাকে, লেবাসে-পোশাকে একদল আদর্শ ও দেশপ্রেমিক' আলেমেদ্বীন তৈরি করা।</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'home/images/p2.jpg' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>মুফতি আবুল হাসান মুহাম্মাদ আব্দুল্লাহ</h3>
+                <span>প্রধান মুফতি মারকাযুদ দাওয়াহ</span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;মহান আল্লাহ ও তাঁর রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সন্তুষ্টি অর্জনের লক্ষ্যে আহলে সুন্নাত ওয়াল জামাতের আকিদা অনুসারে আমলে-আখলাকে, লেবাসে-পোশাকে একদল আদর্শ ও দেশপ্রেমিক' আলেমেদ্বীন তৈরি করা।&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static  'home/images/p3.jpg' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>মুফতি মুস্তাফা কামাল কসেমী</h3>
+                <span> প্রধান মুফতি চুয়াডাঙ্গা জেলা ও দারুল উলুম মাদ্রাসা, চুয়াডাঙ্গা</span>
+              </div>
+            </div>
+            <div>
+              <p>শিশু শ্রেণী থেকে সালিছ (তৃতীয়) শ্রেণি মাদ্রাসার নিজস্ব সিলেবাসের আলোকে পরিচালিত। শিক্ষার্থীদের সহি শুদ্ধ করে পূর্ণ কোরআন তেলাওয়াত শিক্ষাদানের পাশাপাশি বাংলা ইংরেজি গণিত বিষয়ে পাঠদান</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+<!--     <div class="site-section ftco-subscribe-1" style="background-image: url('images/bg_1.jpg'); display:none;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2>Subscribe to us!</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,</p>
+          </div>
+          <div class="col-lg-5">
+            <form action="" class="d-flex">
+              <input type="text" class="rounded form-control mr-2 py-3" placeholder="Enter your email">
+              <button class="btn btn-primary rounded py-3 px-4" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>  -->
+
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- <p class="mb-4"><img src="images/logo1.png" alt="Image" class="img-fluid"></p> -->
+            <!-- <h5>DARUL ARKAM SCHOOL & MADRASAH</h5> -->
+            <h5>দারুল আরকাম স্কুল এন্ড মাদ্রাসা</h5>
+            <p>মহান আল্লাহ ও তাঁর রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সন্তুষ্টি অর্জনের লক্ষ্যে আহলে সুন্নাত ওয়াল জামাতের আকিদা অনুসারে আমলে-আখলাকে, লেবাসে-পোশাকে একদল আদর্শ ও দেশপ্রেমিক' আলেমেদ্বীন তৈরি করা।</p>
+            <!-- <p><a href="#">আরও পড়ুন</a></p> -->
+          </div>
+          <div class="col-lg-3">
+            <h3 class="footer-heading"><span>গুরুত্বপূর্ণ লিঙ্ক</span></h3>
+            <ul class="list-unstyled">
+                <li><a href="#">স্কুল বিভাগ</a></li>
+                <li><a href="#">হিফ্জ বিভাগ</a></li>
+                <li><a href="#">ভর্তি পরীক্ষা</a></li>
+                <li><a href="#">বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ড</a></li>
+                <li><a href="#">মাধ্যমিক ও উচ্চমাধ্যমিক শিক্ষা বোর্ড, ঢাকা</a></li>
+              <!--   <li><a href="#">মাদ্রাসা শিক্ষা অধিদপ্তর</a></li>
+                <li><a href="#">শিক্ষা মন্ত্রণালয়</a></li> -->
+            </ul>
+          </div>
+ <!--          <div class="col-lg-2">
+              <h3 class="footer-heading"><span>Our Courses</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">Math</a></li>
+                  <li><a href="#">Science &amp; Engineering</a></li>
+                  <li><a href="#">Arts &amp; Humanities</a></li>
+                  <li><a href="#">Economics &amp; Finance</a></li>
+                  <li><a href="#">Business Administration</a></li>
+                  <li><a href="#">Computer Science</a></li>
+              </ul>
+          </div> -->
+          <div class="col-lg-3">
+              <h3 class="footer-heading"><span>যোগাযোগ</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">সাহায্য কেন্দ্র</a></li>
+                  <li><a href="#">সমর্থন কমিউনিটি</a></li>
+                  <li><a href="#">আমাদেরকে বার্তা পাঠান </a></li>
+                  <li><a href="#" class="medium"><span class="icon-phone2 mr-2"></span> 01521 304517</a> </li>
+                  <li><a href="#" class="medium"><span class="icon-envelope-o mr-2"></span> info@mydomain.com</a> </li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+                <!-- <p>
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed by <a href="" target="_blank" >ATS-Core</a>
+                </p> -->
+                <p>
+                   কপিরাইট © <script>document.write(new Date().getFullYear());</script><a href="" target="_blank" > ATS-Core </a> কর্তৃক সংরক্ষিত
+                </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"></circle></svg></div>
+
+  <script src="{% static  'home/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery-ui.js' %}"></script>
+  <script src="{% static 'home/js/popper.min.js' %}"></script>
+  <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'home/js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'home/js/aos.js' %}"></script>
+  <script src="{% static 'home/js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'home/js/jquery.mb.YTPlayer.min.js' %}"></script>
+  <script src="{% static 'home/js/main.js' %}"></script>
+
 </body>
+
 </html>

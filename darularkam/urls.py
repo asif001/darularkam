@@ -19,9 +19,11 @@ from django.urls import path, include
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', include('administrator.urls')),
     path('', include('home.urls')),
     path('hostel/', include('hostel.urls')),
-    path('student/', include('student.urls')),
     path('teacher/', include('teacher.urls')),
+    path('school/', include('school.urls')),
+    path('hifz/', include('hifz.urls')),
+    path('notice/', include('notice.urls')),
 ]

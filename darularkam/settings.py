@@ -40,8 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'hostel.apps.HostelConfig',
-    'student.apps.StudentConfig',
     'teacher.apps.TeacherConfig',
+    'school.apps.SchoolConfig',
+    'hifz.apps.HifzConfig',
+    'notice.apps.NoticeConfig',
+    'administrator.apps.AdministratorConfig',
 ]
 
 MIDDLEWARE = [
