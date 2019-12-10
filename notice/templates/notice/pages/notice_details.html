@@ -1,10 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Notice Details</title>
-</head>
-<body>
+{% extends 'home/pages/basesub.html' %}
 
-</body>
-</html>
+{% load static %}
+
+{% block coverslogan %}
+    <h2 class="mb-0">ভর্তি পরীক্ষার সময়সূচি</h2>
+    <p>৯ ডিসেম্বর ২০১৯ </p>
+{% endblock %}
+
+{% block covercurrent %}
+    <a href="{% url 'notice:home' %}">নোটিশ</a>
+    <span class="mx-3 icon-keyboard_arrow_right"></span>
+    <span class="current">বিস্তারিত নোটিশ</span>
+{% endblock %}
+
+{% block mainsection %}
+    <div class="site-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 mb-4">
+                    <p class="mb-5">
+                        <img src="{% static 'home/images/course_5.jpg' %}" alt="Image" class="img-fluid">
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, facere inventore suscipit, et nemo possimus reiciendis dignissimos assumenda, cupiditate at consequatur minima natus deserunt optio ducimus deleniti. Voluptatum, aliquid aspernatur.</p>
+                    <p>Neque officia error quam suscipit necessitatibus placeat impedit, esse, quod voluptates eius facilis dolorum dolores at accusantium totam, quis minima voluptatem quisquam saepe hic. Ipsum cupiditate harum quae earum dolore?</p>
+                    <p>Ea similique vel eligendi ipsam, aspernatur odit itaque inventore. Alias veritatis, mollitia laudantium dignissimos, harum repellendus in tempora at autem velit laboriosam dolorum expedita dolorem commodi quia ipsam, earum et!</p>
+                    <p>Beatae sunt temporibus, at officiis repudiandae quasi dolore, deserunt nemo expedita illum dolor voluptatem reiciendis sit, iure odit harum nihil illo unde repellendus magni. Iusto perferendis quis officiis assumenda consectetur.</p>
+                    <p>Quisquam assumenda eum labore non in eligendi doloremque dicta sequi culpa corrupti reiciendis cupiditate libero accusantium quod, modi ipsa sed debitis deserunt sunt voluptatem sint maxime. Iure maxime consequatur ex.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

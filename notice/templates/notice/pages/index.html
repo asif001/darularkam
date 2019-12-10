@@ -1,10 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Notices</title>
-</head>
-<body>
+{% extends 'home/pages/basesub.html' %}
 
-</body>
-</html>
+{% load static %}
+
+{% block coverslogan %}
+    <h2 class="mb-0">নোটিশ সমূহ</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+{% endblock %}
+
+{% block covercurrent %}
+    <span class="current">নোটিশ</span>
+{% endblock %}
+
+{% block mainsection %}
+
+    <section id="about-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="about-event">
+                        <ul>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ৯ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>ক্যাম্পাস পরিচ্ছন্ন কর্মশালার</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ২ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>ভর্তি পরীক্ষার সময়সূচি</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ২ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>পুরস্কার বিতরণী অনুষ্ঠান</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ৯ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>ক্যাম্পাস পরিচ্ছন্ন কর্মশালার</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ২ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>ভর্তি পরীক্ষার সময়সূচি</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ২ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>পুরস্কার বিতরণী অনুষ্ঠান</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ৯ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>ক্যাম্পাস পরিচ্ছন্ন কর্মশালার</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ২ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>ভর্তি পরীক্ষার সময়সূচি</h4></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-event">
+                                    <span><i class="fa fa-calendar"></i> ২ ডিসেম্বর ২০১৯ </span>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am</span>
+                                    <a href="{% url 'notice:details' %}"><h4>পুরস্কার বিতরণী অনুষ্ঠান</h4></a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-bg">
+            <img src="{% static 'home/images/8.png' %}" alt="About">
+        </div>
+    </section>
+
+{% endblock %}
