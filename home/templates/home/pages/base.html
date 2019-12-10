@@ -1,0 +1,265 @@
+{% load static %}
+
+{% block header %}
+
+<!DOCTYPE html>
+
+<head>
+
+  <title>DARUL ARKAM SCHOOL & MADRASAH</title>
+  <link rel="icon" href="{% static 'home/images/icon.png' %}" type="image/png" sizes="16x16">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="{% static 'home/css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'home/fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'home/fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap-datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header id="header" class="site-navbar js-sticky-header site-navbar-target" role="banner">
+      <div class="">
+        <div class="d-flex align-items-center">
+          <div class="site-logo">
+            <a href="{% url 'home:home' %}" class="d-block">
+              <img id="logo" src="{% static 'home/images/logo1.png' %}" alt="Image" class="img-fluid ml-2" style="max-height: 40px;">
+              <!-- <span style="float: none;">দারুল আরকাম স্কুল এন্ড মাদ্রাসা</span> -->
+              <!-- <h6>asas</h6> -->
+            </a>
+          </div>
+          <div class="ml-auto">
+            <nav class="site-navigation position-relative text-right ex1" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active">
+                  <a href="{% url 'home:home' %}" class="nav-link text-left">হোম</a>
+                </li>
+                <li class="has-children">
+                  <a href="#" class="nav-link text-left">একাডেমিক তথ্য</a>
+                  <ul class="dropdown">
+                    <li><a href="{% url 'school:home' %}">স্কুল বিভাগ</a></li>
+                    <li><a href="{% url 'hifz:home' %}">হিফ্জ বিভাগ</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="{% url 'hostel:home' %}" class="nav-link text-left">হোস্টেল</a>
+                </li>
+                <li>
+                  <a href="{% url 'home:about' %}" class="nav-link text-left">আমাদের সম্পর্কে</a>
+                </li>
+                <li>
+                    <a href="{% url 'home:contact' %}" class="nav-link text-left">যোগাযোগ</a>
+                </li>
+                <li>
+                    <a href="{% url 'administrator:login' %}" class="nav-link text-left">লগইন</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="">
+            <div class="social-wrap container vertical-center">
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<div style="height: 70px;"></div>
+<script>
+document.getElementById("header").style.padding = "30px 10px";
+var hl = document.getElementById('logo').offsetHeight;
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("header").style.padding = "10px 10px";
+    document.getElementById("logo").style.height = hl-hl*.1+"px";
+    document.getElementById("logo").style.transition = ".35s ease-in-out";
+  } else {
+    document.getElementById("header").style.padding = "30px 10px";
+    document.getElementById("logo").style.height = hl+"px";
+    document.getElementById("logo").style.transition = ".35s ease-in-out";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<!--     <div class="py-2 bg-light">
+      <div class="container">
+          <div class="col-lg-9 d-none d-lg-block">
+            <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> Have a questions?</a>
+            <a href="#" class="small mr-3"><span class="icon-phone2 mr-2"></span> 10 20 123 456</a>
+            <a href="#" class="small mr-3"><span class="icon-envelope-o mr-2"></span> info@mydomain.com</a>
+          </div>
+          <div class="col-lg-12 text-center">
+            <a href="login.html" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
+            <a href="register.html" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+          </div>
+          <div class="col-lg-12 text-center">
+            <h2 class="text-black">DARUL ARKAM SCHOOL & MADRASAH</h2>
+            <h2 class="text-black">দারুল আরকাম স্কুল এন্ড মাদ্রাসা</h2>
+          </div>
+      </div>
+    </div> -->
+
+
+
+ <!--    Sadar Hospital Road, opposite the South Gate of Government Women's College, adjacent to the Old Driver Association, South Fourth, Comilla.  Phone: 081 - 74215 Mobile 01816859142, 01781 - 966030.
+সদর হাসপাতাল রোড , সরকারি মহিলা কলেজের দক্ষিণ গেইটের বিপরীতে , পুরাতন ড্রাইভার সমিতি সংলগ্ন , দক্ষিণ চর্থা , কুমিল্লা । ফোনঃ 081 - 74215 মোবাইল 01816859142 , 01781 - 966030 ।
+
+طريق مستشفى الصدر ، مقابل البوابة الجنوبية للكلية الحكومية للبنات ، بجوار جمعية السائقين القديمة ، الجنوب الرابع ، كوميلا.
+
+
+
+হোম
+আমাদের সম্পর্কে
+একাডেমিক বিভাগ
+কার্যক্রম
+ইভেন্ট
+নোটিশ
+যোগাযোগ
+-->
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+{% block footer %}
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- <p class="mb-4"><img src="images/logo1.png" alt="Image" class="img-fluid"></p> -->
+            <!-- <h5>DARUL ARKAM SCHOOL & MADRASAH</h5> -->
+            <h5>দারুল আরকাম স্কুল এন্ড মাদ্রাসা</h5>
+            <p>মহান আল্লাহ ও তাঁর রাসূল সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের সন্তুষ্টি অর্জনের লক্ষ্যে আহলে সুন্নাত ওয়াল জামাতের আকিদা অনুসারে আমলে-আখলাকে, লেবাসে-পোশাকে একদল আদর্শ ও দেশপ্রেমিক' আলেমেদ্বীন তৈরি করা।</p>
+            <!-- <p><a href="#">আরও পড়ুন</a></p> -->
+          </div>
+          <div class="col-lg-3">
+            <h3 class="footer-heading"><span>গুরুত্বপূর্ণ লিঙ্ক</span></h3>
+            <ul class="list-unstyled">
+                <li><a href="#">স্কুল বিভাগ</a></li>
+                <li><a href="#">হিফ্জ বিভাগ</a></li>
+                <li><a href="#">ভর্তি পরীক্ষা</a></li>
+                <li><a href="#">বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ড</a></li>
+                <li><a href="#">মাধ্যমিক ও উচ্চমাধ্যমিক শিক্ষা বোর্ড, ঢাকা</a></li>
+              <!--   <li><a href="#">মাদ্রাসা শিক্ষা অধিদপ্তর</a></li>
+                <li><a href="#">শিক্ষা মন্ত্রণালয়</a></li> -->
+            </ul>
+          </div>
+ <!--          <div class="col-lg-2">
+              <h3 class="footer-heading"><span>Our Courses</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">Math</a></li>
+                  <li><a href="#">Science &amp; Engineering</a></li>
+                  <li><a href="#">Arts &amp; Humanities</a></li>
+                  <li><a href="#">Economics &amp; Finance</a></li>
+                  <li><a href="#">Business Administration</a></li>
+                  <li><a href="#">Computer Science</a></li>
+              </ul>
+          </div> -->
+          <div class="col-lg-3">
+              <h3 class="footer-heading"><span>যোগাযোগ</span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">সাহায্য কেন্দ্র</a></li>
+                  <li><a href="#">সমর্থন কমিউনিটি</a></li>
+                  <li><a href="#">আমাদেরকে বার্তা পাঠান </a></li>
+                  <li><a href="#" class="medium"><span class="icon-phone2 mr-2"></span> 01521 304517</a> </li>
+                  <li><a href="#" class="medium"><span class="icon-envelope-o mr-2"></span> info@mydomain.com</a> </li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+                <!-- <p>
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed by <a href="" target="_blank" >ATS-Core</a>
+                </p> -->
+                <p>
+                   কপিরাইট © <script>document.write(new Date().getFullYear());</script><a href="" target="_blank" > ATS-Core </a> কর্তৃক সংরক্ষিত
+                </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"></circle></svg></div>
+
+  <script src="{% static  'home/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery-ui.js' %}"></script>
+  <script src="{% static 'home/js/popper.min.js' %}"></script>
+  <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'home/js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'home/js/aos.js' %}"></script>
+  <script src="{% static 'home/js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'home/js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'home/js/jquery.mb.YTPlayer.min.js' %}"></script>
+  <script src="{% static 'home/js/main.js' %}"></script>
+
+</body>
+
+</html>
+
+{% endblock %}

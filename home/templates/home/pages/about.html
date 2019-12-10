@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About</title>
-</head>
-<body>
+{% extends 'home/pages/basesub.html' %}
 
-</body>
-</html>
+{% load static %}
+
+{% block coverslogan %}
+    <h2 class="mb-0">আমাদের সম্পর্কে</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+{% endblock %}
+
+{% block covercurrent %}
+    <span class="current">আমাদের সম্পর্কে</span>
+{% endblock %}
+
+{% block mainsection %}
+{% endblock %}

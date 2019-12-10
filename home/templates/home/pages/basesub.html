@@ -1,0 +1,39 @@
+{% extends 'home/pages/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+    {% block coversection %}
+
+        <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('{% static 'home/images/bg_1.jpg' %}')">
+        <div class="container">
+        {% block coveralignment %}
+          <div class="row align-items-end">
+        {% endblock %}
+            <div class="col-lg-7">
+                {% block coverslogan %}
+                {% endblock %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="custom-breadcrumns border-bottom">
+      <div class="container">
+        <a href="{% url 'home:home' %}">হোম</a>
+        <span class="mx-3 icon-keyboard_arrow_right"></span>
+         {% block covercurrent %}
+         {% endblock %}
+      </div>
+    </div>
+
+    {% endblock %}
+
+    {% block mainsection %}
+
+    {% endblock %}
+
+{% endblock %}
