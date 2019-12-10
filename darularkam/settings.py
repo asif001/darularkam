@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'hifz.apps.HifzConfig',
     'notice.apps.NoticeConfig',
     'administrator.apps.AdministratorConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

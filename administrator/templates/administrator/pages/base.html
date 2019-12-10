@@ -1,0 +1,159 @@
+{% load static %}
+
+{% block header %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>DARUL ARKAM SCHOOL & MADRASAH</title>
+  <link rel="icon" href="{% static 'home/images/icon.png' %}" type="image/png" sizes="16x16">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'home/fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/aos.css' %}">
+  <link href="{% static 'home/css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'home/css/Contact-Form-Clean.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/sideber.css' %}">
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header id="header" class="site-navbar js-sticky-header site-navbar-target" role="banner">
+      <div class="">
+        <div class="d-flex align-items-center">
+          <div class="site-logo">
+            <a href="{% url 'home:home' %}" class="d-block">
+              <img id="logo" src="{% static 'home/images/logo1.png' %}" alt="Image" class="img-fluid ml-2" style="max-height: 40px;">
+            </a>
+          </div>
+          <div class="ml-auto">
+            <nav class="site-navigation position-relative text-right ex1" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active">
+                  <a href="{% url 'administrator:home' %}" class="nav-link text-left">অ্যাডমিন</a>
+                </li>
+                <li>
+                  <a href="{% url 'administrator:form_notice' %}" class="nav-link text-left">নোটিশ</a>
+                </li>
+                <li>
+                  <a href="{% url 'administrator:form_dues_stu' %}" class="nav-link text-left">ছাত্র ফি</a>
+                </li>
+                <li>
+                  <a href="{% url 'administrator:form_dues_tea' %}" class="nav-link text-left">শিক্ষক বেতন</a>
+                </li>
+                <li>
+                  <a href="{% url 'administrator:form_hos' %}" class="nav-link text-left">হোস্টেল</a>
+                </li>
+                <li class="has-children">
+                  <a href="#" class="nav-link text-left">নতুন যোগ</a>
+                  <ul class="dropdown">
+                    <li><a href="{% url 'administrator:form_stu' %}">Add Student</a></li>
+                    <li><a href="{% url 'administrator:form_tea' %}">Add Teacher</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="{% url 'home:home' %}" class="nav-link text-left">ওয়েবপৃষ্ঠা যান</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="">
+            <div class="social-wrap container vertical-center">
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<div style="height: 100px;"></div>
+<script>
+document.getElementById("header").style.padding = "30px 10px";
+var hl = document.getElementById('logo').offsetHeight;
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("header").style.padding = "10px 10px";
+    document.getElementById("logo").style.height = hl-hl*.1+"px";
+    document.getElementById("logo").style.transition = ".35s ease-in-out";
+  } else {
+    document.getElementById("header").style.padding = "30px 10px";
+    document.getElementById("logo").style.height = hl+"px";
+    document.getElementById("logo").style.transition = ".35s ease-in-out";
+  }
+}
+</script>
+
+{% endblock %}
+
+{% block coversection %}
+
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+
+  <!-- loader -->
+      <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"></circle></svg></div>
+
+  </div>
+
+</body>
+
+</html>
+
+        <script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
+      <script src="{% static 'home/js/jquery-migrate-3.0.1.min.js' %}"></script>
+      <script src="{% static 'home/js/jquery-ui.js' %}"></script>
+      <script src="{% static 'home/js/popper.min.js' %}"></script>
+      <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'home/js/jquery.stellar.min.js' %}"></script>
+      <script src="{% static 'home/js/jquery.countdown.min.js' %}"></script>
+      <script src="{% static 'home/js/bootstrap-datepicker.min.js' %}"></script>
+      <script src="{% static 'home/js/jquery.easing.1.3.js' %}"></script>
+      <script src="{% static 'home/js/aos.js' %}"></script>
+      <script src="{% static 'home/js/jquery.fancybox.min.js' %}"></script>
+      <script src="{% static 'home/js/jquery.sticky.js' %}"></script>
+      <script src="{% static 'home/js/jquery.mb.YTPlayer.min.js' %}"></script>
+      <script src="{% static 'home/js/main.js' %}"></script>
+
+{% endblock %}

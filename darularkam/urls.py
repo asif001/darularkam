@@ -26,4 +26,5 @@ urlpatterns = [
     path('school/', include('school.urls')),
     path('hifz/', include('hifz.urls')),
     path('notice/', include('notice.urls')),
-]
+
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
