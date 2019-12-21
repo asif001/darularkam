@@ -9,6 +9,10 @@
 5. whitenoise
 
 
+## Tools
+1. Docker
+
+
 ## Introduction
 In this project website for Darularkam Madrasa and School has been implemented
 
