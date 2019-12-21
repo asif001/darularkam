@@ -10,7 +10,7 @@
 
 
 ## Introduction
-In this project website Darularkam Madrasa and School has been implemented
+In this project website for Darularkam Madrasa and School has been implemented
 
 
 
@@ -22,11 +22,6 @@ In this project website Darularkam Madrasa and School has been implemented
 5. `docker-compose up`
 6. Go to `http://127.0.0.1:8000/home` in host machine to access the website
 
-
-
-## Contributing
-The main reason to publish something open source, is that anyone can just jump in and start contributing to my project.
-So If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
 
 
 ## Author
