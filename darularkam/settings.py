@@ -25,7 +25,7 @@ SECRET_KEY = 'jio3n(bm1!b$)fdyk0+it51-y(latb7ry2!c6k-(n#_rq08y+r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
 
 
 # Application definition
@@ -62,6 +62,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'darularkam.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -91,15 +92,15 @@ DATABASES = {
         'NAME': 'darulakram',
         'USER': 'asif',
         'PASSWORD': '4532',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
 
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
+        'LOCATION': 'cached:11211',
     }
 }
 
