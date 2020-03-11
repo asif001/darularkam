@@ -1,4 +1,4 @@
-asgiref==3.2.3
+asgiref==3.2.4
 certifi==2019.11.28
 Django==3.0.1
 django-widget-tweaks==1.4.5
